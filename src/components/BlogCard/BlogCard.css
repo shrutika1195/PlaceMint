@@ -1,0 +1,35 @@
+.blog-card {
+  background-color: #495B62;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  height: 200px;
+}
+
+.blog-image {
+  background-color: #495B62;
+  width: 100%;
+  height: 20%;
+}
+
+.blog-details {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.blog-title {
+  height: 12px;
+  background-color: var(--light-gray);
+  width: 80%;
+  border-radius: 4px;
+}
+
+.blog-meta {
+  height: 8px;
+  background-color: var(--light-gray);
+  width: 70%;
+  border-radius: 4px;
+}

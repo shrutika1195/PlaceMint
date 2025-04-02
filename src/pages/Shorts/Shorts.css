@@ -1,0 +1,222 @@
+/* Shorts.css */
+.reels-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+  }
+  
+  .reel {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .reel-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .reel-footer {
+    position: absolute;
+    bottom: 80px;
+    left: 0;
+    width: 70%;
+    padding: 0 16px;
+    color: #fff;
+    z-index: 2;
+  }
+  
+  .reel-user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid #fff;
+  }
+  
+  .username {
+    font-weight: 600;
+    margin-right: 10px;
+  }
+  
+  .follow-button {
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-size: 0.8rem;
+    cursor: pointer;
+  }
+  
+  .reel-description {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  }
+  
+  .reel-music {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+  }
+  
+  .music-icon {
+    margin-right: 5px;
+    animation: spin 3s linear infinite;
+    display: inline-block;
+  }
+  
+  .music-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
+  }
+  
+  .reel-actions {
+    position: absolute;
+    right: 12px;
+    bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+  }
+  
+  .action-item {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .action-button {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .action-icon {
+    margin-bottom: 5px;
+  }
+  
+  .action-count {
+    font-size: 0.8rem;
+  }
+  
+  .liked .action-icon {
+    color: #ed4956;
+  }
+  
+  .saved .action-icon {
+    color: #ffd700;
+  }
+  
+  .audio-disc {
+    margin-top: 20px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    animation: spin 3s linear infinite;
+    border: 2px solid #fff;
+  }
+  
+  .disc-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .reels-navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    color: #fff;
+    z-index: 3;
+  }
+  
+  .nav-camera {
+    margin-right: 15px;
+    font-size: 1.2rem;
+  }
+  
+  .nav-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    flex-grow: 1;
+    text-align: center;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Additional styles for mobile optimization */
+  @media (max-width: 768px) {
+    .reel-footer {
+      width: 65%;
+      bottom: 100px;
+    }
+    
+    .reel-actions {
+      right: 8px;
+    }
+  }
+  
+  /* Loading animation for videos */
+  .reel-video::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .reel:not(.active) .reel-video::before {
+    opacity: 1;
+  }

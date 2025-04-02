@@ -1,0 +1,151 @@
+/* Main content styles */
+.main-content {
+  padding: 0 2rem 2rem;
+  transition: filter 0.3s ease-in-out;
+}
+
+/* Add blur effect when login modal is open */
+.main-content.blur {
+  filter: blur(8px);
+  pointer-events: none;
+}
+
+/* Hero section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h1 {
+  font-family: joan;
+  font-size: 5rem;
+  margin-left: 35px;
+  margin-top: 50px;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+}
+
+.hero-text p {
+  font-family: joan;
+  font-size: 2rem;
+  line-height: 1.5;
+  margin-left: 35px;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--light-gray);
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.placeholder-image {
+  width: 320px;
+  height: 200px;
+  background-color: #4C5B5F;
+  border-radius: 10px;
+}
+
+/* Trending blogs section */
+.trending-blogs h2 {
+  font-size: 1.5rem;
+  margin-left: 35px;
+  margin-bottom: 1.5rem;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-left: 35px;
+  margin-right: 35px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.site-footer {
+  background-color:var(--dark-blue) ;
+  color: #fff;
+  padding: 3rem 2rem 1rem;
+  margin-top: 2rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 50px;
+}
+
+.footer-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15 px;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.footer-section h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 2px;
+  background-color: var(--mint-green, #4CAF50);
+}
+
+.footer-section p {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+
+.footer-section.links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section.links ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section.links ul li a {
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section.links ul li a:hover {
+  color: var(--mint-green, #4CAF50);
+}
+
+.footer-section.contact p {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 1rem;
+  border-top: 1px solid #555;
+}
+
+.footer-bottom p {
+  font-size: 0.9rem;
+}
